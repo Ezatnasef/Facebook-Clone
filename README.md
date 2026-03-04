@@ -72,7 +72,7 @@ facebook-clone/
 
 1. **Clone or download the repository**
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/Ezatnasef/Facebook-Clone.git
    cd facebook-clone
    ```
 
@@ -147,4 +147,3 @@ This project is for educational purposes. Facebook is a registered trademark of 
 ---
 
 <p align="center">Built with ❤️ using HTML, CSS, and JavaScript</p>
-
