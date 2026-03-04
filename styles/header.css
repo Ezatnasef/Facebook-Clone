@@ -1,0 +1,92 @@
+.fb-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 56px;
+  background: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 16px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.08);
+  z-index: 100;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo {
+  font-size: 32px;
+  color: #0866ff;
+  font-weight: 800;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.header-left input {
+  width: 240px;
+  padding: 8px 36px 8px 12px;
+  border-radius: 50px;
+  border: none;
+  background: #f0f2f5;
+  font-size: 15px;
+}
+
+.header-center {
+  display: flex;
+  gap: 8px;
+}
+
+.header-center .nav {
+  width: 112px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  cursor: pointer;
+  position: relative;
+}
+
+.header-center .nav.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: #0866ff;
+  border-radius: 2px;
+}
+
+.header-center .nav:hover {
+  background: #f0f2f5;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.header-right button,
+.notification-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #e4e6eb;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-right img {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+}

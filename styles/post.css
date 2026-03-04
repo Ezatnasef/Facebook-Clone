@@ -1,0 +1,218 @@
+.post {
+  background: white;
+  border-radius: 12px;
+  margin-bottom: 16px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+
+.post-header {
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.post-header img {
+  width: 40px !important;
+  height: 40px !important;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.post-header div {
+  flex: 1;
+}
+
+.post-header strong {
+  font-size: 15px;
+  font-weight: 600;
+  display: block;
+}
+
+.post-header span {
+  font-size: 13px;
+  color: #65676b;
+}
+
+.post p {
+  padding: 0 12px 8px;
+  font-size: 15px;
+  line-height: 1.4;
+  word-wrap: break-word;
+}
+
+.post img:not(.post-header img) {
+  width: 100%;
+  height: auto;
+  max-height: 600px;
+  object-fit: cover;
+  display: block;
+}
+
+.post-actions {
+  padding: 8px 12px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-top: 1px solid #e4e6eb;
+  background: white;
+  position: relative;
+}
+
+/* الأزرار الأساسية (Like, Comment, Share) */
+.reaction-btn,
+.post-actions button {
+  padding: 8px 20px;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #65676b;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.reaction-btn:hover,
+.post-actions button:hover {
+  background: #f0f2f5;
+}
+
+/* عدد اللايكات */
+.reaction-count {
+  margin-left: 6px;
+  color: #65676b;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* صندوق الإيموجيات */
+.reactions-box {
+  position: absolute;
+  bottom: 70px;
+  left: 12px; /* زي الكود الأساسي اللي بعته */
+  background: white;
+  padding: 10px 14px;
+  border-radius: 50px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.25);
+  display: flex;
+  gap: 8px;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.25s ease;
+  transform: translateY(10px);
+  z-index: 10000; /* عالي جدًا عشان يفضل فوق الصورة */
+}
+
+.reaction-btn:hover .reactions-box {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.reactions-box span {
+  font-size: 36px;
+  cursor: pointer;
+  transition: transform 0.25s;
+}
+
+.reactions-box span:hover {
+  transform: scale(1.4) translateY(-8px);
+}
+
+/* الـ container عشان الـ hover يشتغل صح */
+.reaction-container {
+  position: relative;
+  display: inline-block;
+}
+/* ميزة التعليقات */
+.comments-section {
+  padding: 0 12px 12px;
+  display: none;
+}
+
+.comments-section.open {
+  display: block;
+}
+
+.comment-form {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.comment-form img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+
+.comment-form input {
+  flex: 1;
+  padding: 8px 12px;
+  border-radius: 20px;
+  border: 1px solid #e4e6eb;
+  background: #f0f2f5;
+  font-size: 14px;
+}
+
+.comment-form button {
+  background: #1877f2;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.comments-list {
+  margin-top: 10px;
+}
+
+.comment {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.comment img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+
+.comment-content {
+  background: #f0f2f5;
+  padding: 8px 12px;
+  border-radius: 18px;
+  max-width: 80%;
+}
+
+.comment strong {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.comment p {
+  margin: 4px 0 0;
+  font-size: 14px;
+  padding: 0;
+}
+
+.comment span {
+  font-size: 12px;
+  color: #65676b;
+}
+
+/* عدد التعليقات جنب الزر */
+.comment-count {
+  margin-left: 6px;
+  color: #65676b;
+  font-size: 14px;
+  font-weight: 500;
+}

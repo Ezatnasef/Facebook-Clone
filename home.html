@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Facebook</title>
+  <link rel="stylesheet" href="styles/general.css">
+  <link rel="stylesheet" href="styles/header.css">
+  <link rel="stylesheet" href="styles/left-sidebar.css">
+  <link rel="stylesheet" href="styles/right-sidebar.css">
+  <link rel="stylesheet" href="styles/feed.css">
+  <link rel="stylesheet" href="styles/post.css">
+  <link rel="stylesheet" href="styles/dark.css">
+  <link rel="stylesheet" href="styles/notifications.css">
+</head>
+<body>
+  <header class="fb-header">
+    <div class="header-left">
+      <span class="logo">facebook</span>
+      <input type="text" placeholder="Search Facebook">
+    </div>
+    <div class="header-center">
+      <span class="nav active">🏠</span>
+      <span class="nav">🎥</span>
+      <span class="nav">👥</span>
+      <span class="nav">🛒</span>
+    </div>
+    <div class="header-right">
+      <button onclick="toggleDark()">🌙</button>
+      
+      <div class="notification-icon" onclick="toggleNotifications()">
+        🔔
+        <span class="notification-badge" id="notificationBadge">0</span>
+      </div>
+      
+      <img src="https://i.pravatar.cc/36?img=12" alt="Profile">
+      <button onclick="logout()" style="background:none;border:none;cursor:pointer;margin-left:10px;color:#65676b;">Logout</button>
+    </div>
+  </header>
+
+  <div class="notifications-panel" id="notificationsPanel">
+    <div class="notifications-header">
+      <h3>Notifications</h3>
+    </div>
+    <div class="notifications-list" id="notificationsList"></div>
+  </div>
+
+  <div class="layout">
+    <aside class="left-sidebar">
+      <div class="profile">
+        <img src="https://i.pravatar.cc/40?img=12" alt="Profile">
+        <span>Ezzat</span>
+      </div>
+      <a href="profile.html">👤 Profile</a>
+      <a>👥 Friends</a>
+      <a>👨‍👩‍👧 Groups</a>
+      <a>🛒 Marketplace</a>
+      <a>💾 Saved</a>
+    </aside>
+
+    <main class="feed">
+      <div class="stories">
+        <div class="story" style="background-image: linear-gradient(180deg, transparent 50%, rgba(0,0,0,0.8)), url('https://thumbs.dreamstime.com/b/stunning-mountain-landscape-crystal-clear-flowing-stream-breathtaking-photo-realistic-scene-majestic-lush-358650506.jpg');" data-text="Story 1"></div>
+        <div class="story" style="background-image: linear-gradient(180deg, transparent 50%, rgba(0,0,0,0.8)), url('https://thumbs.dreamstime.com/b/idyllic-summer-landscape-clear-mountain-lake-alps-45054687.jpg');" data-text="Story 2"></div>
+        <div class="story" style="background-image: linear-gradient(180deg, transparent 50%, rgba(0,0,0,0.8)), url('https://pethelpful.com/.image/w_3840,q_auto:good,c_limit/MTk2NzY3MjA5ODc0MjY5ODI2/top-10-cutest-cat-photos-of-all-time.jpg');" data-text="Story 3"></div>
+        <div class="story" style="background-image: linear-gradient(180deg, transparent 50%, rgba(0,0,0,0.8)), url('https://images.pexels.com/photos/3075993/pexels-photo-3075993.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');" data-text="Story 4"></div>
+      </div>
+
+      <div class="create-post">
+        <img src="https://i.pravatar.cc/40?img=12" alt="Profile">
+        <input type="text" id="postText" placeholder="What's on your mind, Ezzat?">
+        <button onclick="addPost()">Post</button>
+      </div>
+
+      <div id="posts">
+        <div class="post">
+          <div class="post-header">
+            <img src="https://graph.facebook.com/4/picture?type=square" alt="Mark Zuckerberg">
+            <div>
+              <strong>Mark Zuckerberg</strong>
+              <span>2h ago</span>
+            </div>
+          </div>
+          <p>Hello Facebook 👋</p>
+          <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Beautiful mountains">
+          <div class="post-actions">
+            <div class="reaction-container">
+              <div class="reaction-btn">
+                <span class="reaction-label">👍 Like</span>
+                <span class="reaction-count"></span>
+                <div class="reactions-box">
+                  <span onclick="react(this,'👍')">👍</span>
+                  <span onclick="react(this,'❤️')">❤️</span>
+                  <span onclick="react(this,'😂')">😂</span>
+                  <span onclick="react(this,'😮')">😮</span>
+                  <span onclick="react(this,'😢')">😢</span>
+                  <span onclick="react(this,'😡')">😡</span>
+                </div>
+              </div>
+            </div>
+            <button onclick="toggleComments(this)">💬 Comment <span class="comment-count">0</span></button>
+            <button onclick="alert('Share feature coming soon!')">↪ Share</button>
+          </div>
+
+          <!-- قسم التعليقات -->
+          <div class="comments-section">
+            <div class="comment-form">
+              <img src="https://i.pravatar.cc/32?img=12" alt="You">
+              <input type="text" placeholder="Write a comment..." class="comment-input">
+              <button onclick="addComment(this)">Post</button>
+            </div>
+            <div class="comments-list">
+              <!-- التعليقات هتضاف هنا ديناميكيًا -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <aside class="right-sidebar">
+      <h4>Contacts</h4>
+      <div class="contact"><span class="online"></span> Ahmed</div>
+      <div class="contact"><span class="online"></span> Sara</div>
+      <div class="contact"><span class="online"></span> Mohamed</div>
+    </aside>
+  </div>
+
+  <script src="scripts/posts.js"></script>
+  <script src="scripts/reactions.js"></script>
+  <script src="scripts/dark.js"></script>
+  <script src="scripts/auth.js"></script>
+  <script src="scripts/notifications.js"></script>
+</body>
+</html>

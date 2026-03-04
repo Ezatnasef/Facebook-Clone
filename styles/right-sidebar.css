@@ -1,0 +1,36 @@
+.right-sidebar {
+  width: 340px;
+  padding: 12px 8px;
+  position: fixed;
+  right: 0;
+  height: calc(100vh - 56px);
+  overflow-y: auto;
+}
+
+.right-sidebar h4 {
+  font-size: 17px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #65676b;
+}
+
+.contact {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px;
+  border-radius: 10px;
+  font-size: 15px;
+}
+
+.contact:hover {
+  background: #f0f2f5;
+}
+
+.online {
+  width: 10px;
+  height: 10px;
+  background: #42b72a;
+  border-radius: 50%;
+  border: 2px solid white;
+}

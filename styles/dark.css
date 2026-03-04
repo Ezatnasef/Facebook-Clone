@@ -1,0 +1,27 @@
+body.dark {
+  background: #18191a;
+  color: #e4e6eb;
+}
+
+body.dark .fb-header,
+body.dark .post,
+body.dark .create-post,
+body.dark .login-box {
+  background: #242526;
+}
+
+body.dark .post-actions {
+  border-top: 1px solid #393a3b;
+}
+
+body.dark input,
+body.dark .create-post input {
+  background: #3a3b3c;
+  color: white;
+}
+
+body.dark .left-sidebar a:hover,
+body.dark .profile:hover,
+body.dark .contact:hover {
+  background: #3a3b3c;
+}

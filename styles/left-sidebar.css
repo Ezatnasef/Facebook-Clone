@@ -1,0 +1,30 @@
+.left-sidebar {
+  width: 340px;
+  padding: 12px 8px;
+  position: fixed;
+  left: 0;
+  height: calc(100vh - 56px);
+  overflow-y: auto;
+}
+
+.profile,
+.left-sidebar a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.profile img {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+}
+
+.profile span,
+.left-sidebar a {
+  color: #050505;
+}

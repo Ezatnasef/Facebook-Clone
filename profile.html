@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Profile - Facebook</title>
+  <link rel="stylesheet" href="styles/general.css">
+  <link rel="stylesheet" href="styles/header.css">
+  <link rel="stylesheet" href="styles/dark.css">
+  <style>
+    .profile-cover { height: 350px; background: #1877f2; }
+    .profile-info { text-align: center; margin-top: -100px; }
+    .profile-info img { width: 160px; height: 160px; border-radius: 50%; border: 5px solid white; }
+    .profile-info h2 { margin: 10px 0; font-size: 32px; }
+  </style>
+</head>
+<body>
+  <header class="fb-header">
+    <div class="header-left">
+      <span class="logo">facebook</span>
+    </div>
+    <div class="header-right">
+      <button onclick="toggleDark()">🌙</button>
+      <button onclick="window.location.href='home.html'" style="background:none;border:none;cursor:pointer;color:#1877f2;">Home</button>
+    </div>
+  </header>
+
+  <div class="profile-cover"></div>
+  <div class="profile-info">
+    <img src="https://i.pravatar.cc/160?img=12" alt="Profile">
+    <h2>Ezzat</h2>
+    <p>AI Student | Love coding and tech</p>
+  </div>
+
+  <script src="scripts/dark.js"></script>
+</body>
+</html>

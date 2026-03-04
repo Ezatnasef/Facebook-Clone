@@ -1,0 +1,71 @@
+.feed {
+  flex: 1;
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 12px 0;
+}
+
+.stories {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 16px;
+  padding: 8px 0;
+  overflow-x: hidden;
+}
+
+.story {
+  width: 120px;
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 12px;
+  flex-shrink: 0;
+  position: relative;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.story::after {
+  content: attr(data-text);
+  position: absolute;
+  bottom: 8px;
+  left: 8px;
+  color: white;
+  font-size: 13px;
+  font-weight: 600;
+  text-shadow: 0 1px 2px black;
+}
+
+.create-post {
+  background: white;
+  padding: 12px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.create-post img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.create-post input {
+  flex: 1;
+  padding: 12px 16px;
+  border-radius: 50px;
+  background: #f0f2f5;
+  border: none;
+  font-size: 16px;
+}
+
+.create-post button {
+  background: #0866ff;
+  color: white;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+}
